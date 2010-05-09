@@ -21,7 +21,7 @@ Feature: Publish artist data in tv and radio websites
 		And I select "Brasil" from "pais"
 		And I fill message in "mensagem"
 		And I press "enviar"
-		    Then I should see "Mensagem Enviada"
+		Then I should see "Mensagem Enviada"
 	
 	Scenario: Patricia palumbo blog
 	  Given I am on the Patricia Palumbo page
@@ -41,7 +41,6 @@ Feature: Publish artist data in tv and radio websites
 		And I press "Enviar!"
 	  Then I should see "Entre em contato"
 	
-	@agora
 	Scenario: Selecao Cultura
 	  Given I am on the Selecao Cultura page
 		And I put nome in "nome"
@@ -54,6 +53,25 @@ Feature: Publish artist data in tv and radio websites
 		And I fill in "compositor1" with "Ze de Riba"
 		And I press "Envie"
 		And I should see "AGRADECEMOS"
+		
+	Scenario: O toque
+	  Given I am on the O toque page
+		And I put nome in "txt_nome"
+		And I put email in "txt_email"
+		And I put message2 in "txt_mensagem"
+		And I press "enviar dados"
+	  Then I should see "Sua mensagem foi enviada"
+	
+	@agora
+	Scenario: Sites de música
+	  Given I am on the Sites de musica page
+		And I put nome in "your-name"
+		And I put email in "your-email"
+		And I put message2 in "your-message"
+		And I press "Enviar"
+	  Then I should see "Sua mensagem foi enviada"
+	
+		
 	
 	
 	

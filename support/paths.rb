@@ -24,7 +24,12 @@ module NavigationHelpers
 			
 		when /the Selecao Cultura page/
 			"http://www2.tvcultura.com.br/radiofm/selecaodoouvinte.htm"
+			
+		when /the O toque page/
+			"http://www.otoque.com.br/contato.htm"
 		
+		when /Sites de musica/
+			"http://www.sitesdemusica.com.br/contato"
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
