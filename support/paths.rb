@@ -30,6 +30,9 @@ module NavigationHelpers
 		
 		when /Sites de musica/
 			"http://www.sitesdemusica.com.br/contato"
+		
+		when /Gazeta FM/
+			"http://www.gazetafm.com.br/contato/"
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

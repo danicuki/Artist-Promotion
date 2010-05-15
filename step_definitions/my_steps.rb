@@ -3,7 +3,7 @@ When /^I submit$/ do
 end
 
 When /^I put message in "([^\"]*)"$/ do |field|
-	fill_in(field, :with => "Ola, sou da producao da cantora brasileira Daniella Alcarpe. Gostaria de indicar a participacao dessa cantora de grande talento no seu programa. O site dela eh www.cantora.mus.br. Obrigado. Daniel")	
+	fill_in(field, :with => "Ola, sou da producao da cantora brasileira Daniella Alcarpe. Gostaria de indicar a participacao dessa cantora de grande talento na programacao de voces. O site dela eh www.cantora.mus.br. Obrigado. Daniel")	
 end
 
 When /^I put message2 in "([^\"]*)"$/ do |field|

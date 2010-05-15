@@ -3,7 +3,6 @@ require "selenium-webdriver"
 # Selenium::WebDriver.for :chrome
 
 Capybara.current_driver = :selenium
-Capybara.run_server = false
 
 
 require 'uri'
@@ -17,9 +16,10 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  Capybara.current_driver = :selenium
-  
+	Capybara.current_driver = :selenium
+	
   visit path_to(page_name)
 end
 
@@ -32,6 +32,11 @@ When /^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/ do |button, selector|
     click_button(button)
   end
 end
+
+When /^(?:|I )submit form$/ do 
+  find("//input[@type='SUBMIT']").click 
+end
+
 
 When /^(?:|I )follow "([^\"]*)"(?: within "([^\"]*)")?$/ do |link, selector|
   with_scope(selector) do
