@@ -33,6 +33,16 @@ module NavigationHelpers
 		
 		when /Gazeta FM/
 			"http://www.gazetafm.com.br/contato/"
+			
+		when /Eldorado FM/
+			"http://www.territorioeldorado.limao.com.br/fale.shtm"
+			
+		when /MPB FM/
+		  "http://www.mpbfm.com.br/faleconosco"
+		
+		when /Sobre Sites/
+			"http://www.sobresites.com/mpb/fale.php"
+			
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

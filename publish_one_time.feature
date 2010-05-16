@@ -28,7 +28,16 @@ Feature: Publish artist just one time
 		And I press "Enviar"
 	  Then I should see "Sua mensagem foi enviada"
 	
-		
+	@agora
+	Scenario: Sobre sites
+	  Given I am on the Sobre Sites page
+		And I put nome in "name"
+		And I put email in "email"
+		And I put message2 in "body"
+		And I fill in "subject" with "Cantora Daniella Alcarpe"
+		And I press "enviar"
+	  Then I should see "mensagem foi enviada com sucesso"
+
 	
 	
 	

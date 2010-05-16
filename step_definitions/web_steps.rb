@@ -2,7 +2,8 @@ require 'capybara/cucumber'
 require "selenium-webdriver"
 # Selenium::WebDriver.for :chrome
 
-Capybara.current_driver = :selenium
+Capybara.default_driver = :selenium
+# Capybara.current_driver = :celerity
 
 
 require 'uri'
@@ -17,9 +18,7 @@ end
 World(WithinHelpers)
 
 
-Given /^(?:|I )am on (.+)$/ do |page_name|
-	Capybara.current_driver = :selenium
-	
+Given /^(?:|I )am on (.+)$/ do |page_name|	
   visit path_to(page_name)
 end
 
@@ -33,9 +32,14 @@ When /^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/ do |button, selector|
   end
 end
 
-When /^(?:|I )submit form$/ do 
+When /^(?:|I )SUBMIT form$/ do 
   find("//input[@type='SUBMIT']").click 
 end
+
+When /^I click image "([^\"]*)"$/ do |src|
+  find("//img[@src='#{src}']").click 
+end
+
 
 
 When /^(?:|I )follow "([^\"]*)"(?: within "([^\"]*)")?$/ do |link, selector|
