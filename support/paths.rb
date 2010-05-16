@@ -43,6 +43,8 @@ module NavigationHelpers
 		when /Sobre Sites/
 			"http://www.sobresites.com/mpb/fale.php"
 			
+		when /CBN/
+			"http://cbn.globoradio.globo.com/institucional/fale-conosco/FALE-CONOSCO.htm"
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

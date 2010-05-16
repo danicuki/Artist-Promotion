@@ -18,3 +18,7 @@ end
 When /^I put nome in "([^\"]*)"$/ do |field|
 	fill_in(field, :with => "Daniel")
 end
+
+When /^I execute the script "([^\"]*)"$/ do |arg1|
+  evaluate_script(arg1)
+end

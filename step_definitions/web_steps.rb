@@ -32,8 +32,8 @@ When /^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/ do |button, selector|
   end
 end
 
-When /^(?:|I )SUBMIT form$/ do 
-  find("//input[@type='SUBMIT']").click 
+When /^I (.*) form$/ do |action| 
+  find("//input[@type='#{action}']").click 
 end
 
 When /^I click image "([^\"]*)"$/ do |src|

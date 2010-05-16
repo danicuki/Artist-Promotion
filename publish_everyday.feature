@@ -49,17 +49,16 @@ Feature: Publish artist data in tv and radio websites
 		And I press "Enviar"
 		Then I should see "mensagem enviada com sucesso"
 
-  # nao preenche os campos
-	# Scenario: MPB FM
-	#   Given I am on the MPB FM page
-	# 	When I put nome in "txtSeuNome"
-	# 	And I put email in "txtSeuEmail"
-	# 	And I put message in "txaComentario"
-	# 	And I fill in "txtIdade" with "30"
-	# 	And I fill in "txtBairro" with "Centro"
-	# 	And I select "Sugestão" from "cmbAssunto"
-	# 	And I Submit form
-	# 	Then I should see "mensagem enviada com sucesso"
+	Scenario: MPB FM
+	  Given I am on the MPB FM page
+		When I put nome in "txtSeuNome"
+		And I put email in "txtSeuEmail"
+		And I put message in "txaComentario"
+		And I fill in "txtIdade" with "30"
+		And I fill in "txtBairro" with "Centro"
+		And I select "Sugestão" from "cmbAssunto"
+		And I Submit form
+		Then I should see "enviado com sucesso"
 
 
   #selenium trava nesse site 
@@ -72,17 +71,21 @@ Feature: Publish artist data in tv and radio websites
 	# 	Then I should see "enviado com sucesso"
 	
 	# selenium nao preenche os campos
-	# Scenario: Selecao Cultura
-	#   Given I am on the Selecao Cultura page
-	# 	And I put nome in "nome"
-	# 	And I fill in "email" with "danicuki@gmail.com"
-	# 	And I fill in "telefone" with "11 9990-7528"
-	# 	And I fill in "bairro" with "Jardins"
-	# 	And I fill in "cidade" with "Sao Paulo"
-	# 	And I fill in "musica1" with "Vestidim"
-	# 	And I fill in "interprete1" with "Daniella Alcarpe"
-	# 	And I fill in "compositor1" with "Ze de Riba"
-	# 	And I SUBMIT form
-	# 	And I should see "AGRADECEMOS"
+	Scenario: Selecao Cultura
+	  Given I am on the Selecao Cultura page
+		And I put nome in "nome"
+		And I fill in "email" with "danicuki@gmail.com"
+		And I fill in "telefone" with "11 9990-7528"
+		And I fill in "bairro" with "Jardins"
+		And I fill in "cidade" with "Sao Paulo"
+		And I fill in "musica1" with "Vestidim"
+		And I fill in "interprete1" with "Daniella Alcarpe"
+		And I fill in "compositor1" with "Ze de Riba"
+		And I SUBMIT form
+		And I should see "AGRADECEMOS"
+		
+	
+	
+	
 
 	
