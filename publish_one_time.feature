@@ -28,7 +28,6 @@ Feature: Publish artist just one time
 		And I press "Enviar"
 	  Then I should see "Sua mensagem foi enviada"
 	
-	@agora
 	Scenario: Sobre sites
 	  Given I am on the Sobre Sites page
 		And I put nome in "name"
@@ -38,8 +37,17 @@ Feature: Publish artist just one time
 		And I press "enviar"
 	  Then I should see "mensagem foi enviada com sucesso"
 
-	
-	
+  @agora
+	Scenario: TomJazz
+	  Given I am on the TomJazz page
+		And I put nome in "nome"
+		And I put email in "email"
+		And I fill in "telefone" with "11 9990-7528"
+		And I fill in "assunto" with "Show da cantora Daniella Alcarpe"
+		And I put message in "mensagem"
+		And I press "Enviar"
+	  Then I should see "enviada com sucesso"
+
 	
 	
 	
