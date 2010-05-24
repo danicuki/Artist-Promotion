@@ -84,6 +84,15 @@ Feature: Publish artist data in tv and radio websites
 		And I SUBMIT form
 		And I should see "AGRADECEMOS"
 		
+	Scenario: Canal Brasil
+	  Given I am on the Canal Brasil page
+		When I put nome in "nome"
+		And I put email in "email"
+		And I put message in "sugestao"
+		And I fill in "sobrenome" with "C."
+		And I select "sugestão" from "assunto"
+		And I click image of class "botao_enviar"
+		Then I should see "enviado com sucesso"
 	
 	
 	

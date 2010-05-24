@@ -51,6 +51,9 @@ module NavigationHelpers
 			
 		when /TomJazz/
 			"http://www.tomjazz.com.br/contato.php"
+			
+		when /Canal Brasil/
+			"http://canalbrasil.globo.com/faleconosco.php"
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
